@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 # File: guessinggame.sh
 
+function number{
+	local num=$[$(ls -l | wc -l)-1]
+	echo $num
+}
 
 echo "How many files in this directory?"
-
-key=$[$(ls -l | wc -l)-1]
+echo "Your guess:.."
+key=$(number)
 
 read pika
 
@@ -16,7 +20,7 @@ while [ $pika -ne $key ]
 		else
 			echo "Too low!"
 		fi
-		echo "Try again or walk away..."
+		echo "Please try again..."
 		read pika
 done
 
