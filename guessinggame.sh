@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # File: guessinggame.sh
 
-function number{
-	local num=$[$(ls -l | wc -l)-1]
+function number {
+	local num=$(ls -l | wc -l)
 	echo $num
 }
 
